@@ -35,7 +35,7 @@ function mp_stacks_brick_content_output_embed_tweets($default_content_output, $m
 		$embed_tweets_per_row = empty( $embed_tweets_per_row ) ? '2' : $embed_tweets_per_row;
 
 		//Tweets Output
-		$embed_tweets_output = '<div class="mp-stacks-embed_tweets">';
+		$embed_tweets_output = '<div class="mp-stacks-embed-tweets">';
 		
 		//Get Tweets CSS Output
 		$embed_tweets_output .= '

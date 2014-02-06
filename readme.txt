@@ -33,6 +33,9 @@ See full instructions at http://moveplugins.com/doc/mp-stacks
 
 == Changelog ==
 
+= 1.0.0.2 = February 6, 2014
+CSS Updates
+
 = 1.0.0.1 = February 5, 2014
 Responsive to 100% width for tweets at 600px
 
