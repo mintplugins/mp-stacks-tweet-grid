@@ -25,7 +25,7 @@
 			'software_name' => 'MP Stacks Embed Tweets', //<- The exact name of this Plugin.
 			'software_api_url' => 'http://moveplugins.com',//The URL where Features and mp_repo are installed and checked
 			'software_filename' => 'mp-stacks-embed-tweets.php',
-			'software_licensed' => true, //<-Boolean
+			'software_licensed' => false, //<-Boolean
 		);
 		
 		//Since this is a plugin, call the Plugin Updater class

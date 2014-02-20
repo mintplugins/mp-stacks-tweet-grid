@@ -3,7 +3,7 @@
 Plugin Name: MP Stacks + Embed Tweets
 Plugin URI: http://moveplugins.com
 Description: Content-Type Add-on for MP Stacks which allows you to embed 'tweets' on a custom grid.
-Version: 1.0.0.2
+Version: 1.0.0.3
 Author: Move Plugins
 Author URI: http://moveplugins.com
 Text Domain: mp_stacks_embed_tweets
@@ -34,7 +34,7 @@ License: GPL2
 */
 // Plugin version
 if( !defined( 'MP_STACKS_EMBED_TWEETS_VERSION' ) )
-	define( 'MP_STACKS_EMBED_TWEETS_VERSION', '1.0.0.0' );
+	define( 'MP_STACKS_EMBED_TWEETS_VERSION', '1.0.0.3' );
 
 // Plugin Folder URL
 if( !defined( 'MP_STACKS_EMBED_TWEETS_PLUGIN_URL' ) )
