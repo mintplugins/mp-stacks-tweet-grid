@@ -7,7 +7,7 @@
  * @package    MP Stacks Features
  * @subpackage Functions
  *
- * @copyright  Copyright (c) 2013, Move Plugins
+ * @copyright  Copyright (c) 2014, Mint Plugins
  * @license    http://opensource.org/licenses/gpl-2.0.php GNU Public License
  * @author     Philip Johnston
  */
@@ -35,7 +35,7 @@ function mp_stacks_brick_content_output_embed_tweets($default_content_output, $m
 		$embed_tweets_per_row = empty( $embed_tweets_per_row ) ? '2' : $embed_tweets_per_row;
 
 		//Tweets Output
-		$embed_tweets_output = '<div class="mp-stacks-embed-tweets">';
+		$embed_tweets_output = '<div class="mp-stacks-tweet-grid">';
 		
 		//Get Tweets CSS Output
 		$embed_tweets_output .= '
@@ -61,7 +61,7 @@ function mp_stacks_brick_content_output_embed_tweets($default_content_output, $m
 							
 					$embed_tweets_output .= '<div class="mp-stacks-embed-tweet">';
 					
-						$embed_tweets_output .= $embed_tweets_repeater['embed_tweet_code'];	
+						$embed_tweets_output .= html_entity_decode( $embed_tweets_repeater['embed_tweet_code'] );	
 				
 					$embed_tweets_output .= '</div>';
 					

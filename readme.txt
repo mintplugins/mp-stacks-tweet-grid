@@ -1,6 +1,6 @@
-=== MP Stacks + Embed Tweets ===
+=== MP Stacks + Tweet Grid ===
 Contributors: johnstonphilip
-Donate link: http://moveplugins.com/
+Donate link: http://mintplugins.com/
 Tags: message bar, header
 Requires at least: 3.8.1
 Tested up to: 3.8.1
@@ -18,7 +18,7 @@ Content-Type Add-on for MP Stacks which allows you to embed 'tweets' on a custom
 
 This section describes how to install the plugin and get it working.
 
-1. Upload the 'mp-stacks-embed-tweets’ folder to the `/wp-content/plugins/` directory
+1. Upload the 'mp-stacks-tweet-grid’ folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Build Bricks under the “Stacks and Bricks” menu. 
 4. Publish your bricks into a “Stack”.
@@ -26,21 +26,12 @@ This section describes how to install the plugin and get it working.
 
 == Frequently Asked Questions ==
 
-See full instructions at http://moveplugins.com/doc/mp-stacks
+See full instructions at http://mintplugins.com/doc/mp-stacks
 
 == Screenshots ==
 
 
 == Changelog ==
 
-= 1.0.0.3 = February 20, 2014
-Released as Free Add-On for MP Stacks
-
-= 1.0.0.2 = February 6, 2014
-CSS Updates
-
-= 1.0.0.1 = February 5, 2014
-Responsive to 100% width for tweets at 600px
-
-= 1.0.0.0 = February 5, 2014
+= 1.0.0.0 = May 13, 2014
 * Original release

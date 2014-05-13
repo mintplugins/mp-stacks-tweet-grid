@@ -4,10 +4,10 @@
  *
  * @since 1.0.0
  *
- * @package    MP Stacks Embed Tweets
+ * @package    MP Stacks Tweet Grid
  * @subpackage Functions
  *
- * @copyright  Copyright (c) 2013, Move Plugins
+ * @copyright  Copyright (c) 2014, Mint Plugins
  * @license    http://opensource.org/licenses/gpl-2.0.php GNU Public License
  * @author     Philip Johnston
  */
@@ -23,33 +23,42 @@
 /**
  * Enqueue css and js
  *
- * Filter: mp_stacks_embed_tweets_css_location
+ * Filter: mp_stacks_tweet_grid_css_location
  */
-function mp_stacks_embed_tweets_enqueue_scripts(){
+function mp_stacks_tweet_grid_enqueue_scripts(){
 		
 	//Enqueue features CSS
-	wp_enqueue_style( 'mp_stacks_embed_tweets_css', plugins_url( 'css/embed-tweets.css', dirname( __FILE__ ) ) );
+	wp_enqueue_style( 'mp_stacks_tweet_grid_css', plugins_url( 'css/embed-tweets.css', dirname( __FILE__ ) ) );
 
 }
  
 /**
  * Enqueue css face for social grid
  */
-add_action( 'wp_enqueue_scripts', 'mp_stacks_embed_tweets_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'mp_stacks_tweet_grid_enqueue_scripts' );
 
 /**
  * Enqueue css and js
  *
- * Filter: mp_stacks_embed_tweets_css_location
+ * Filter: mp_stacks_tweet_grid_css_location
  */
-function mp_stacks_embed_tweets_admin_enqueue_scripts(){
+function mp_stacks_tweet_grid_admin_enqueue_scripts(){
 	
 	//Enqueue Admin Embed Tweets CSS
-	//wp_enqueue_style( 'mp_stacks_embed_tweets_css', plugins_url( 'css/admin-features.css', dirname( __FILE__ ) ) );
+	//wp_enqueue_style( 'mp_stacks_tweet_grid_css', plugins_url( 'css/admin-features.css', dirname( __FILE__ ) ) );
 
 }
  
 /**
  * Enqueue css face for social grid
  */
-add_action( 'admin_enqueue_scripts', 'mp_stacks_embed_tweets_admin_enqueue_scripts' );
+add_action( 'admin_enqueue_scripts', 'mp_stacks_tweet_grid_admin_enqueue_scripts' );
+
+ 
+/**
+ * Allow cross-domain from twitter
+ */
+ function mp_stacks_tweet_grid_head_meta(){
+	echo '<meta name="twitter:widgets:csp" content="on">'; 
+ }
+ add_action( 'wp-head', 'mp_stacks_tweet_grid_head_meta' );

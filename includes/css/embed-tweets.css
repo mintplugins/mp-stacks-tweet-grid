@@ -1,4 +1,4 @@
-.mp-stacks-embed-tweets{
+.mp-stacks-tweet-grid{
 	margin:0 -20px 0 -20px;	
 }
 .mp-stacks-embed-tweet{
@@ -10,7 +10,7 @@
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
 }
-.mp-stacks-embed-tweets-clearedfix:after {
+.mp-stacks-tweet-grid-clearedfix:after {
 	content: ".";
 	visibility: hidden;
 	display: block;
@@ -18,7 +18,7 @@
 	clear: both;
 }
 @media screen and (max-width: 600px){
-	.mp-stacks-embed-tweets{
+	.mp-stacks-tweet-grid{
 		margin:0!important;	
 	}
 	.mp-stacks-embed-tweet{ 
