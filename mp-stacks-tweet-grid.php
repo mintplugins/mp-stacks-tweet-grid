@@ -3,7 +3,7 @@
 Plugin Name: MP Stacks + Tweet Grid
 Plugin URI: http://mintplugins.com
 Description: Content-Type Add-on for MP Stacks which allows you to embed 'tweets' on a custom grid.
-Version: 1.0.0.0
+Version: 1.0.0.1
 Author: Mint Plugins
 Author URI: http://mintplugins.com
 Text Domain: mp_stacks_tweet_grid
