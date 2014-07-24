@@ -28,7 +28,7 @@ function mp_stacks_tweet_grid_create_meta_box(){
 	 */
 	$mp_stacks_tweet_grid_add_meta_box = array(
 		'metabox_id' => 'mp_stacks_tweet_grid_metabox', 
-		'metabox_title' => __( '"Embed Tweets" Content-Type', 'mp_stacks_tweet_grid'), 
+		'metabox_title' => __( '"Tweet Grid" Content-Type', 'mp_stacks_tweet_grid'), 
 		'metabox_posttype' => 'mp_brick', 
 		'metabox_context' => 'advanced', 
 		'metabox_priority' => 'low' 

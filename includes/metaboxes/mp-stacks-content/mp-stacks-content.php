@@ -27,8 +27,8 @@ function mp_stacks_tweet_grid_add_media_type( $mp_stacks_content_types_array ){
 	 * Array which stores all info about the options within the metabox
 	 *
 	 */
-	$mp_stacks_content_types_array[0]['field_select_values']['embed_tweets'] = 'Embed Tweets';
-	$mp_stacks_content_types_array[1]['field_select_values']['embed_tweets'] = 'Embed Tweets';
+	$mp_stacks_content_types_array[0]['field_select_values']['tweet_grid'] = 'Tweet Grid';
+	$mp_stacks_content_types_array[1]['field_select_values']['tweet_grid'] = 'Tweet Grid';
 	
 	return $mp_stacks_content_types_array;
 
