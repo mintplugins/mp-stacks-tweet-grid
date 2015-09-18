@@ -22,7 +22,10 @@
 function mp_stacks_brick_content_output_embed_tweets($default_content_output, $mp_stacks_content_type, $post_id){
 	
 	//If this stack content type is set to be an image	
-	if ($mp_stacks_content_type == 'embed_tweets'){
+	if ( $mp_stacks_content_type == 'embed_tweets' || $mp_stacks_content_type == 'tweet_grid'){
+		
+		//Enqueue features CSS
+		wp_enqueue_style( 'mp_stacks_tweet_grid_css', plugins_url( 'css/embed-tweets.css', dirname( __FILE__ ) ), array(), MP_STACKS_TWEET_GRID_VERSION );
 		
 		//Set default value for $content_output to NULL
 		$content_output = NULL;	
