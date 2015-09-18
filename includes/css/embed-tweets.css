@@ -1,5 +1,6 @@
 .mp-stacks-tweet-grid{
 	margin:0 -20px 0 -20px;	
+	display:inline-block;
 }
 .mp-stacks-embed-tweet{
 	display:inline-block;
