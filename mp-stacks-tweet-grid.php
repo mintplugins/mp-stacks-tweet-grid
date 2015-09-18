@@ -3,7 +3,7 @@
 Plugin Name: MP Stacks + Tweet Grid
 Plugin URI: http://mintplugins.com
 Description: Content-Type Add-on for MP Stacks which allows you to embed 'tweets' on a custom grid.
-Version: 1.0.0.2
+Version: 1.0.0.3
 Author: Mint Plugins
 Author URI: http://mintplugins.com
 Text Domain: mp_stacks_tweet_grid
@@ -11,7 +11,7 @@ Domain Path: languages
 License: GPL2
 */
 
-/*  Copyright 2014  Phil Johnston  (email : phil@mintplugins.com)
+/*  Copyright 2015  Phil Johnston  (email : phil@mintplugins.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -34,7 +34,7 @@ License: GPL2
 */
 // Plugin version
 if( !defined( 'MP_STACKS_TWEET_GRID_VERSION' ) )
-	define( 'MP_STACKS_TWEET_GRID_VERSION', '1.0.0.2' );
+	define( 'MP_STACKS_TWEET_GRID_VERSION', '1.0.0.3' );
 
 // Plugin Folder URL
 if( !defined( 'MP_STACKS_TWEET_GRID_PLUGIN_URL' ) )
@@ -149,10 +149,14 @@ function mp_stacks_tweet_grid_include_files(){
 		require( MP_STACKS_TWEET_GRID_PLUGIN_DIR . 'includes/metaboxes/mp-stacks-tweet-grid-meta/mp-stacks-tweet-grid-meta.php' );
 		
 		/**
-		 * Functions which assist with the creation of templates using this add-on
+		 * Add this add on to the list of Active MP Stacks Add Ons
 		 */
 		if ( function_exists('mp_stacks_developer_textdomain') ){
-			require( MP_STACKS_TWEET_GRID_PLUGIN_DIR . 'includes/misc-functions/stack-template-functions.php' );
+			function mp_stacks_tweet_grid_add_active( $required_add_ons ){
+				$required_add_ons['mp_stacks_tweet_grid'] = 'MP Stacks + Tweet Grid';
+				return $required_add_ons;
+			}
+			add_filter( 'mp_stacks_active_add_ons', 'mp_stacks_tweet_grid_add_active' );
 		}
 		
 		/**
