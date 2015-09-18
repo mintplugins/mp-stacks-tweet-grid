@@ -8,7 +8,7 @@
  * @package    MP Stacks Tweet Grid
  * @subpackage Functions
  *
- * @copyright   Copyright (c) 2014, Mint Plugins
+ * @copyright   Copyright (c) 2015, Mint Plugins
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
  * @author      Philip Johnston
  */
@@ -31,7 +31,8 @@ function mp_stacks_tweet_grid_create_meta_box(){
 		'metabox_title' => __( '"Tweet Grid" Content-Type', 'mp_stacks_tweet_grid'), 
 		'metabox_posttype' => 'mp_brick', 
 		'metabox_context' => 'advanced', 
-		'metabox_priority' => 'low' 
+		'metabox_priority' => 'low',
+		'metabox_content_via_ajax' => true,
 	);
 	
 	/**
@@ -39,13 +40,6 @@ function mp_stacks_tweet_grid_create_meta_box(){
 	 *
 	 */
 	$mp_stacks_tweet_grid_items_array = array(
-		array(
-			'field_id'			=> 'embed_tweet_settings_description',
-			'field_title' 	=> __( 'Overall Feature Settings', 'mp_stacks_tweet_grid'),
-			'field_description' 	=> '<br />Choose the overall settings for your tweet grid' ,
-			'field_type' 	=> 'basictext',
-			'field_value' => '',
-		),
 		array(
 			'field_id'			=> 'embed_tweets_per_row',
 			'field_title' 	=> __( 'Tweets Per Row', 'mp_stacks_tweet_grid'),
@@ -92,4 +86,5 @@ function mp_stacks_tweet_grid_create_meta_box(){
 	global $mp_stacks_tweet_grid_meta_box;
 	$mp_stacks_tweet_grid_meta_box = new MP_CORE_Metabox($mp_stacks_tweet_grid_add_meta_box, $mp_stacks_tweet_grid_items_array);
 }
-add_action('plugins_loaded', 'mp_stacks_tweet_grid_create_meta_box');
+add_action('mp_brick_ajax_metabox', 'mp_stacks_tweet_grid_create_meta_box');
+add_action('wp_ajax_mp_stacks_tweet_grid_metabox_content', 'mp_stacks_tweet_grid_create_meta_box');
